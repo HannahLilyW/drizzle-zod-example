@@ -1,0 +1,26 @@
+diff --git a/index.cjs b/index.cjs
+index 1448a1aa6cb3e91dc1a1388089a0d10fba2bba18..36b1214a9493afd8387487162105b3d1e0a6bd47 100644
+--- a/index.cjs
++++ b/index.cjs
+@@ -181,7 +181,7 @@ function numberColumnToSchema(column, z, coerce) {
+         max = Number.MAX_SAFE_INTEGER;
+     }
+     let schema = coerce === true || coerce?.number
+-        ? integer ? z.coerce.number() : z.coerce.number().int()
++        ? integer ? z.coerce.number().int() : z.coerce.number()
+         : integer
+             ? z.int()
+             : z.number();
+diff --git a/index.mjs b/index.mjs
+index cb83b2bd36fb84f65a298ab0ddb0a29aadebaad7..f2584ff7810f9a80d4cebb0d55cb6e6d9470f951 100644
+--- a/index.mjs
++++ b/index.mjs
+@@ -179,7 +179,7 @@ function numberColumnToSchema(column, z, coerce) {
+         max = Number.MAX_SAFE_INTEGER;
+     }
+     let schema = coerce === true || coerce?.number
+-        ? integer ? z.coerce.number() : z.coerce.number().int()
++        ? integer ? z.coerce.number().int() : z.coerce.number()
+         : integer
+             ? z.int()
+             : z.number();

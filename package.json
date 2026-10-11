@@ -1,0 +1,28 @@
+{
+  "name": "drizzle-zod-example",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "typecheck": "bun check"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11",
+    "tsx": "^4.23.15"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "@hono/zod-openapi": "^1.6.3",
+    "dotenv": "^18.0.7",
+    "drizzle-orm": "0.45.3",
+    "drizzle-zod": "^0.8.3",
+    "pg": "^8.23.1"
+  },
+  "patchedDependencies": {
+    "drizzle-zod@0.8.3": "patches/drizzle-zod@0.8.3.patch"
+  }
+}
